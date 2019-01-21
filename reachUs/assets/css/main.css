@@ -4236,7 +4236,52 @@
 			}
 
 		}
-	.social-icons {
+	.contact-pic {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+.cp {
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.contact-wrapper {
+    
+	margin: auto;
+	position: relative;
+}
+
+.contact-wrapper p {
+    
+	
+}
+.contact-info {
+    display: block;
+    float: right;
+    padding: 10px;
+    margin-top: 15px;
+    color: #000;
+}
+.contact-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    max-width: 790px;
+    max-height: 400px;
+}
+.contact-table td {
+	display: inline-block;
+	justify-content:center;
+	align-items:center;
+}
+.social-icons {
     display: flex;
     flex-direction: row;
     justify-content: center;

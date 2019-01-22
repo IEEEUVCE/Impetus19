@@ -4,34 +4,33 @@ body{
 
 .bg{
     background-image: url("../images/bg.png");
-    height: 85%;
     background-attachment: fixed;
     background-repeat: repeat;
     background-size: cover;
-
 }
+
 .nav-bar li a{
     color: #1e1e1d;
-    font-size: 28px;
+    font-size: 25px;
     text-decoration: none;
     font-family: 'PT Serif', serif;
 }
+
 .nav-bar li{
     display: inline;
     margin-right: 5%;
-    font-size: 25px;
     height: 100%;
 }
 
 .nav-bar{
     position: fixed;
     top: 0;
-    float: left;
     width: 100%;
     overflow: hidden;
+    justify-content: center;
     display: block;
-    height: 7%;
-    padding-top: 0.3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     margin: 0;
     background: #f96c0d;
 }
@@ -52,7 +51,7 @@ body{
     font-family: 'Garmond';
     font-size: 50px;
     margin-top: 80px;
-    margin-bottom: 10px;
+   
 }
 
 .after-movie{
@@ -62,10 +61,10 @@ body{
 }
 
 #div-after-movie{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 40px;
-    margin-bottom: 45px;
-    margin-right: 50px;
+    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 .carousel-inner > .item > img,
@@ -75,21 +74,23 @@ body{
 }
 
 #myCarousel{
-    width: 80%;
+    width: 70%;
+    height: 80%;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    position: relative;
 }
 
 .container{
     align-items: center;
+    
 }
 
 .footer {
     position: relative;
-    top: 0;
+    top: 20px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -126,10 +127,11 @@ body{
     text-align: justify;
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    top: -120px;
     font-weight: bold;
- }
+    margin-right: 40px;
+    margin-top: 65px;
+    float: right;
+}
 
  .one{
      display: inline-block;

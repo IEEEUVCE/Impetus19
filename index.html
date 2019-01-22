@@ -14,6 +14,43 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
                
+                <style>
+                .mainDiv
+{
+    
+    align-items: center;
+    /*justify-content: space-around;*/
+    justify-content: center;
+    font-family: 'Roboto';
+}
+#days,
+#hours,
+#seconds,
+#minutes
+{
+    font-size: 20px;
+}
+.timeLayout
+{
+    width: 105px;
+    height: 105px;
+    border: 2px solid #f96c0d;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+
+
+
+                
+        </style>
 	</head>
 	<body>
 
@@ -58,14 +95,35 @@
                             <div class="content">
                                 <header class="align-center">
                                 <h2>Countdown</h2>
+                                <p>Coming Soon!</p>
+                                <hr />
                                 </header>
+                                
+                                <div>
+                                    
+                                    <div style="overflow-x: auto; margin: auto; width: 100%;">
+                                        <table class="mainDiv" align="center">
+                                <tr>
+                                    <td align="center">
+        <div id="days" class="timeLayout align-center">          
+        </div></td>
+        <td align="center"><div id="hours" class="timeLayout align-center">
+            </div></td>
+            <td align="center"><div id="minutes" class="timeLayout align-center">
+                </div></td>
+                <td align="center"><div id="seconds" class="timeLayout align-center">
+                    </div></td>
+    </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </section> 
 
 		<!-- One -->
-			<section id="one" class="wrapper style2">
+		<!--	<section id="one" class="wrapper style2">
 				<div class="inner">
 					<div>
 						<div class="box">
@@ -84,9 +142,9 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
-		<!-- Two -->
+		<!-- Two --> <!--
 			<section id="two" class="wrapper style3">
 				<div class="inner">
 					<div id="flexgrid">
@@ -119,10 +177,10 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 		<!-- Three -->
-			<section id="three" class="wrapper style2">
+		<!--	<section id="three" class="wrapper style2">
 				<div class="inner">
 					<div class="grid-style">
 
@@ -160,10 +218,10 @@
 
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 		<!-- Four -->
-			<section id="four" class="wrapper style3">
+		<!--	<section id="four" class="wrapper style3">
 				<div class="inner">
 
 					<header class="align-center">
@@ -172,7 +230,7 @@
 					</header>
 
 				</div>
-			</section>
+			</section> -->
 
 		<!-- Social-contacts -->
     <div class="social-icons">
@@ -209,6 +267,77 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+                        
+                        <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+// Set the date we're counting down to
+var countDownDate = new Date("March 28, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days + "<br / > <span class=\"fontSize\">Days</span>";
+    document.getElementById("hours").innerHTML= hours + "<br />"+ "<span class=\"fontSize\">Hours</span>";
+    document.getElementById("minutes").innerHTML=  minutes + "<br />"+ "<span class=\"fontSize\">Minutes</span>";
+    document.getElementById("seconds").innerHTML= seconds +"<br />"+ "<span class=\"fontSize\">Seconds</span>";
+
+    // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    // + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 	</body>
 </html>

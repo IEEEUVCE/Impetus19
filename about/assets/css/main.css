@@ -2868,6 +2868,7 @@
 
 		.wrapper.style2 {
 			background-color: rgba(30, 30, 30, 1);
+			background-image: url("../../images/5.png");
 			color: #a6a6a6;
 		}
 
@@ -4252,5 +4253,103 @@
 }
 
 .social-icons .fab:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+body{
+    margin: 0px;
+    
+}
+
+.bg{
+    
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+
+
+
+.sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+  
+.title-about-impetus{
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Garmond';
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.about-fest{
+    background-color: #f96c0d;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+}
+
+.title-about-fest{
+    font-size: 35px;
+    color: #1e1e1d;
+    text-align: center;
+    opacity: 1;
+}
+
+.about-info{
+    font-size: 23px;
+    color: #1e1e1d;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif, bold;
+    opacity: 1;
+}
+
+.fest-theme{
+    background-color: #f96c0d;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 0px;
+}
+
+.theme{
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Garmond';
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.title-theme{
+    font-size: 35px;
+    color: #1e1e1d;
+    text-align: center;
+    opacity: 1;
+}
+
+.theme-info{
+    font-size: 23px;
+    color: #1e1e1d;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif,bold;
     opacity: 1;
 }

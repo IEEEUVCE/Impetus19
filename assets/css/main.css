@@ -1798,7 +1798,7 @@
 
 	.box {
 		margin-bottom: 2rem;
-		background: rgba(230, 230, 230, 1);
+		background: rgba(255, 255, 255, 1);
 	}
 
 		.box .content {
@@ -3433,7 +3433,7 @@
 		#header > .logo {
 			display: inline-block;
 			height: inherit;
-			left: 1.25rem;
+			right: 1.25rem;
 			line-height: inherit;
 			margin: 0;
 			padding: 0;
@@ -3463,6 +3463,8 @@
 			color: inherit;
 			text-decoration: none;
 			color: #fff;
+			position: absolute;
+			left: 1.25rem;
 		}
 
 			#header > a[href="#menu"] {
@@ -3570,25 +3572,25 @@
 /* Menu */
 
 	#menu {
-		-moz-transform: translateX(20em);
-		-webkit-transform: translateX(20em);
-		-ms-transform: translateX(20em);
-		transform: translateX(20em);
-		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
-		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
-		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
-		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+		-moz-transform: translateX(-20em);
+		-webkit-transform: translateX(-20em);
+		-ms-transform: translateX(-20em);
+		transform: translateX(-20em);
+		-moz-transition: -moz-transform 0.5s ease, box-shadow 0.0s ease, visibility 0.5s;
+		-webkit-transition: -webkit-transform 0.5s ease, box-shadow 0.0s ease, visibility 0.5s;
+		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.0s ease, visibility 0.5s;
+		transition: transform 0.5s ease, box-shadow 0.0s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
 		background: #f96c0d;
 		background-color: #f96c0d;
-		box-shadow: 20px 20px 50px grey;
+		box-shadow: 0px 0px 0px black;
 		color: #f96c0d;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
 		padding: 3em 2em;
 		position: fixed;
-		right: 0;
+		left: 0;
 		top: 0;
 		visibility: hidden;
 		width: 20em;
@@ -3876,15 +3878,15 @@
 /* Footer */
 
 	#footer {
-		padding: 6rem 0 4rem 0 ;
-		background: #f2f2f2;
+		padding: 0 0 0 0 ;
+		background: rgba(30, 30, 30, 1);
 	}
 
 		#footer .copyright {
 			color: #bbb;
 			font-size: 0.9rem;
-			margin: 0 0 2rem 0;
-			padding: 0;
+			margin: 0 0 0 0;
+			padding: 0 0 1rem 0;
 			text-align: center;
 		}
 
@@ -4234,3 +4236,21 @@
 			}
 
 		}
+	.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: rgba(30, 30, 30, 1);
+}
+
+.social-icons .fab {
+    color: bisque;
+    font-size: 2rem;
+    opacity: 0.7;
+    padding: 1.8rem;
+    transition-delay: 100ms;
+}
+
+.social-icons .fab:hover {
+    opacity: 1;
+}

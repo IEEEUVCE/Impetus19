@@ -81,10 +81,15 @@
 			formats to work correctly.
 		-->
 			<section id="banner">
-				<div class="inner">
-					<h1>Impetus 2k19</h1>
-					<p>UVCE's Biggest Technical Fest<br /> <br />
-					<a href="#Countdown_Timer" class="button special scrolly">Know More</a>
+                            <video autoplay muted loop>
+                                <source src="images/Banner.mp4" type="video/mp4">
+                            </video>
+                            <div class="inner">
+                                
+					<!--<br />
+                                        <br />
+                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+                                        <a href="#Countdown_Timer" class="button special scrolly" id="count_btn">Know More</a>
 				</div>
 			</section>
                 
@@ -277,6 +282,13 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+function scrolling() {
+var scr = document.getElementById("count_btn");
+scr.click(); }
+
+setTimeout("scrolling()", 8000);
+
 // Set the date we're counting down to
 var countDownDate = new Date("March 28, 2019 15:37:25").getTime();
 

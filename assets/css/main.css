@@ -3716,7 +3716,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/pic03.jpg");
+		/*background-image: url("../../images/pic03.jpg");*/
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -3747,17 +3747,20 @@
 			font-size: 4rem;
 			margin-bottom: 1rem;
 			color: #FFF;
+			
 		}
 
 		#banner p {
 			color: rgba(255, 255, 255, 0.65);
 			font-size: 1.5rem;
 			margin-bottom: 3rem;
+			
 		}
 
 		#banner a {
 			color: #FFF;
 			text-decoration: none;
+			
 		}
 
 		#banner video {
@@ -3772,6 +3775,7 @@
 			height: auto;
 			min-width: 100%;
 			min-height: 100%;
+			max-width: 100%;
 			overflow: hidden;
 		}
 
@@ -3799,12 +3803,13 @@
 		#banner .button {
 			background-color: #f96c0d;
 			color: #000;
+			visibility: hidden;
 		}
 
 		@media screen and (max-width: 1280px) {
 
 			#banner video {
-				display: none;
+				/*display: none;*/
 			}
 
 		}

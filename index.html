@@ -89,17 +89,35 @@
 					<!--<br />
                                         <br />
                                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-                                        <a href="#Countdown_Timer" class="button special scrolly" id="count_btn">Know More</a>
+                                        <a href="#maintitle" class="button special scrolly" id="title_fest">Know More</a>
 				</div>
 			</section>
-                
+				
+			
+			<section id="maintitle" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+							<h2 style="margin-bottom: 10px; font-weight: bold; font-size: 40px;">IMPETUS 19.0</h2>
+							<h2 style="margin-bottom: 7px;">Techfusion: Redefining Possibilities</h2>
+							<img src="logo.png" alt="Impetus Logo" style="width: 150px; height: 150px;margin-top: 10px;">
+							</header>
+							<div class="inner">
+								<a href="#Countdown_Timer" class="button special scrolly" id="count_btn" style="width:0; height:0;"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
                 <!-- Countdown Timer -->
                <section id ="Countdown_Timer" class="wrapper style2">
                     <div class="inner">
                         <div class="box">
                             <div class="content">
                                 <header class="align-center">
-                                <h2>Countdown</h2>
+								<h2 style="margin-bottom: 10px; margin-top: 7px;">Countdown</h2>
                                 <p>Coming Soon!</p>
                                 <hr />
                                 </header>
@@ -238,20 +256,20 @@
 			</section> -->
 
 		<!-- Social-contacts -->
-		<div class="social-icons">
-			<a href="https://www.facebook.com/impetusuvce">
-				<i class="fab fa-facebook-f"></i>
-			</a>
-			<a href="https://twitter.com/ieeeuvce">
-				<i class="fab fa-twitter"></i>
-			</a>
-			<a href="https://www.instagram.com/ieeeuvce/">
-				<i class="fab fa-instagram"></i>
-			</a>
-			<a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow">
-				<i class="fab fa-youtube"></i>
-			</a>
-		</div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/ieeeuvce/">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/ieeeuvce">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ieeeuvce/">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/ieeeuvce/">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
                 
 		<!-- Footer -->
 			<footer id="footer">
@@ -283,11 +301,22 @@ function myFunction() {
     }
 }
 
+
+function scrolling1() {
+var scr1 = document.getElementById("title_fest");
+scr1.click(); }
+
+setTimeout("scrolling1()", 8000);
+
+
 function scrolling() {
 var scr = document.getElementById("count_btn");
 scr.click(); }
 
-setTimeout("scrolling()", 8000);
+setTimeout("scrolling()", 12000);
+
+
+
 
 // Set the date we're counting down to
 var countDownDate = new Date("March 28, 2019 15:37:25").getTime();
@@ -349,6 +378,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
 </script>
 
 	</body>

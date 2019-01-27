@@ -84,40 +84,40 @@
 								<hr />
 								<form>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="name-1" id="name-1" value="" placeholder="Team Member 1's Name" required/>
+										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required/>
 									</div>
 									<br>
                                     <div style="margin: auto; width: 50%;">
-										<input type="text" name="number" id="phNo" value="" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
+										<input type="text" name="number" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-										<input type="email" name="email" id="email" value="" placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+										<input type="email" name="email" id="email"  placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="name-2" id="name-2" value="" placeholder="Team Member 2's Name" />
+										<input type="text" name="name2" id="name2"  placeholder="Team Member 2's Name " onkeyup="costFunc(this);"/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="name-3" id="name-3" value="" placeholder="Team Member 3's Name" />
+										<input type="text" name="name3" id="name3" placeholder="Team Member 3's Name" onkeyup="costFunc(this);"/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="name-4" id="name-4" value="" placeholder="Team Member 4's Name" />
+										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" onkeyup="costFunc(this);"/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="college" id="college" value="" placeholder="College Name" required/>
+										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
-									<input type="text" name="cost" id="cost" value="30"  readonly>
+									<input type="text" name="cost" id="cost" value="0"  readonly>
 									</div>
 									<br>
 									<div style='margin: auto; width: 50%;'>
                                                                     <div class="select-wrapper">
-													<select name="event" id="event"">
+													<select name="event" id="event" onChange="costFunc(this);">
 														<option value="">- Event -</option>
 														<option value="1">RobIT</option>
 														<option value="2">CodeStorm</option>
@@ -182,6 +182,42 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
+			<script >
+			function costFunc() {
+				var yourSelect = document.getElementById( "event" );
+				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
+				  c=0;
+				if (document.getElementById('name1').value != "" ){
+					c++;
+				}
+				if (document.getElementById('name2').value != ""){
+					c++;
+				}
+				if (document.getElementById('name3').value != "" ){
+					c++;
+				}
+				if (document.getElementById('name4').value != ""){
+					c++;
+				}
+				if(eventSelected=="RobIT")
+					document.getElementById("cost").value = 30*c;
+				else if(eventSelected=="CodeStorm")
+					document.getElementById("cost").value = 30*c;
+				else if(eventSelected=="Summit")
+					document.getElementById("cost").value = 0*c;
+				else if(eventSelected=="Lazer Tag")
+					document.getElementById("cost").value = 70*c;
+				else if(eventSelected=="Steal Jobs")
+					document.getElementById("cost").value = 30*c;
+				else if(eventSelected=="Line Seguidor")
+					document.getElementById("cost").value = 30*c;
+				else if(eventSelected=="Epsilon")
+					document.getElementById("cost").value = 0*c;
+				else if(eventSelected=="Web Development")
+					document.getElementById("cost").value = 30*c;
+
+				
+			}
+			</script>
 	</body>
 </html>

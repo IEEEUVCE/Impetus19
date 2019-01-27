@@ -84,7 +84,7 @@
 								<hr />
 								<form>
 									<div style="margin: auto; width: 50%;">
-										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required/>
+										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
 									</div>
 									<br>
                                     <div style="margin: auto; width: 50%;">
@@ -94,7 +94,7 @@
 									<div style="margin: auto; width: 50%;">
 										<input type="email" name="email" id="email"  placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
 									</div>
-									<br>
+									<br id="br2">
 									<div style="margin: auto; width: 50%;">
 										<input type="text" name="name2" id="name2"  placeholder="Team Member 2's Name " onkeyup="costFunc(this);"/>
 									</div>
@@ -102,11 +102,11 @@
 									<div style="margin: auto; width: 50%;">
 										<input type="text" name="name3" id="name3" placeholder="Team Member 3's Name" onkeyup="costFunc(this);"/>
 									</div>
-									<br>
+									<br id="br3">
 									<div style="margin: auto; width: 50%;">
 										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" onkeyup="costFunc(this);"/>
 									</div>
-									<br>
+									<br id="br4">
 									<div style="margin: auto; width: 50%;">
 										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
@@ -117,7 +117,7 @@
 									<br>
 									<div style='margin: auto; width: 50%;'>
                                                                     <div class="select-wrapper">
-													<select name="event" id="event" onChange="costFunc(this);">
+													<select name="event" id="event" onChange="costFunc(this);" required>
 														<option value="">- Event -</option>
 														<option value="1">RobIT</option>
 														<option value="2">CodeStorm</option>
@@ -187,6 +187,50 @@
 				var yourSelect = document.getElementById( "event" );
 				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
 				  c=0;
+				if(eventSelected=="RobIT" || eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+				}
+				else if(eventSelected=="CodeStorm"){//max2
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'none ';
+					document.getElementById('name3').value = "";
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'none ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				else if(eventSelected=="Summit" || eventSelected=="Web Development"){//max3
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				else if(eventSelected=="Steal Jobs" || eventSelected=="Epsilon"){
+					document.getElementById('name2').style.display = 'none ';
+					document.getElementById('name2').value = "";
+					document.getElementById('name3').style.display = 'none ';
+					document.getElementById('name3').value = "";
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'none ';
+					document.getElementById('br3').style.display = 'none ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				
+
+
+
+
+
 				if (document.getElementById('name1').value != "" ){
 					c++;
 				}

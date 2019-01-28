@@ -4240,7 +4240,9 @@
     padding: 10px;
     text-align: center;
     display: block;
-    float: left;
+    margin: auto;
+	
+	width: auto;
 }
 
 .cp {
@@ -4249,6 +4251,7 @@
     border-radius: 100%;
     max-width: 100px;
     max-height: 100px;
+	
 }
 
 .contact-wrapper {
@@ -4263,10 +4266,11 @@
 }
 .contact-info {
     display: block;
-    float: right;
-    padding: 10px;
-    margin-top: 15px;
+	margin-top: 15px;
     color: #000;
+    padding: 10px;
+    margin: auto;
+	justify-content: center;
 }
 .contact-section {
     display: flex;
@@ -4277,10 +4281,12 @@
     max-height: 400px;
 }
 .contact-table td {
-	display: inline-block;
+	
 	justify-content:center;
 	align-items:center;
+	background-color: rgba(255, 255, 255, 1);
 }
+
 .social-icons {
     display: flex;
     flex-direction: row;

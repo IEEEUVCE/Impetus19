@@ -23,32 +23,10 @@
     justify-content: center;
     font-family: 'Roboto';
 }
-#days,
-#hours,
-#seconds,
-#minutes
-{
-    font-size: 0.5rem;
-}
-.timeLayout
-{
-    width: 105px;
-    height: 105px;
-    border: 2px solid #f96c0d;
-    padding: 20px;
-    margin: 10px;
-    background-color: white;
-    color: black;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 5px;
-}
 .countdown {
     font-size: 30px;
     display: flex;
-    font-size: 1.5rem;
+
     left: 37%;
     bottom: 5%;
     animation: timer-down 2s ease-in 7s;
@@ -67,7 +45,38 @@
     display: block;
     font-size: 15px;
 }
+.countdown1{
+	width:40%;
+}
+/* <!-countdown for mobile screens> */
+@media screen and (max-width: 430px) {
+.countdown {
+    font-size: 20px;
+    display: flex;  
+    animation: timer-down 2s ease-in 7s;
+    animation-fill-mode: both;
+}
+.countdown div {
+   
+    border: 2px solid #f96c0d;
+	border-radius: 10px;
+	color: white;
+    background-color: black;
+	opacity: 0.8;
+}
+.countdown span {
+    display: block;
+	font-size: 10px;
+	margin: -8px;
+	text-align: center;
 
+}
+.countdown1{
+	width:100%;
+	margin-left: -5%;
+	
+}
+}
 
 
                 
@@ -141,127 +150,19 @@
 								<h2 style="margin-bottom: 10px; margin-top: 7px;">Countdown</h2>
                                 <hr />
 							</header>
-                                <center>		
-                                <div style="margin: auto; width: 100%;">
+							<center>
+                                <div class = "countdown1">
+									
 										<div class="countdown"></div> 
+										
 									</div>
-                                </center>	
+								</center>
 
                         </div>
                     </div>
                     </div>
                 </section> 
-
-		<!-- One -->
-		<!--	<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div>
-						<div class="box">
-							<div class="image fit">
-								<img src="images/pic01.jpg" alt="" />
-							</div>
-							<div class="content">
-								<header class="align-center">
-									<h2>Lorem ipsum dolor</h2>
-									<p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
-								</header>
-								<hr />
-								<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								<p>Vivamus fermentum nibh vel pharetra blandit. Cras a purus urna. Sed et libero ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse id hendrerit felis. Nulla viverra tempor dui at congue. Pellentesque quis nulla ornare, congue nisi id, finibus nulla. Aliquam sit amet hendrerit purus. Donec libero massa, posuere fermentum eros sit amet, maximus fringilla augue. Maecenas at rhoncus lorem. Vivamus ultricies consequat est, efficitur convallis libero. Vivamus rutrum semper mauris, vitae consequat eros tempor ac. Pellentesque et ornare sapien</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
-
-		<!-- Two --> <!--
-			<section id="two" class="wrapper style3">
-				<div class="inner">
-					<div id="flexgrid">
-						<div>
-							<header>
-								<h3>Tempus Feugiat</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-						<div>
-							<header>
-								<h3>Aliquam Nulla</h3>
-							</header>
-							<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed </p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-						<div>
-							<header>
-								<h3>Sed Magna</h3>
-							</header>
-							<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section> -->
-
-		<!-- Three -->
-		<!--	<section id="three" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/pic02.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<h2>Lorem ipsum dolor</h2>
-										<p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
-									</header>
-									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/pic03.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<h2>Vestibulum sit amet</h2>
-										<p>mattis sapien pretium tellus venenatis</p>
-									</header>
-									<hr />
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section> -->
-
-		<!-- Four -->
-		<!--	<section id="four" class="wrapper style3">
-				<div class="inner">
-
-					<header class="align-center">
-						<h2>Morbi interdum mollis sapien</h2>
-						<p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-					</header>
-
-				</div>
-			</section> -->
-
+	
 	<!-- Social-contacts -->
     <div class="social-icons">
         <a href="https://www.facebook.com/impetusuvce" target="_blank">
@@ -345,12 +246,23 @@ const intvl = setInterval(() => {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display result
-    countdown.innerHTML = `
-  <div  style="width: 25%;">${days}<span>&nbsp&nbspDays&nbsp&nbsp</span></div>
-  <div  style="width: 25%;">${hours}<span>&nbspHours&nbsp</span></div>
-  <div  style="width: 25%;">${mins}<span>Minutes</span></div>
-  <div  style="width: 25%;">${seconds}<span>Seconds</span></div>
-  `;
+    // Display result
+	if (screen.width > 430) {      
+		countdown.innerHTML = `
+			<div  style="width: 25%;">${days}<span>&nbsp&nbspDays&nbsp&nbsp</span></div>
+			<div  style="width: 25%;">${hours}<span>&nbspHours&nbsp</span></div>
+			<div  style="width: 25%;">${mins}<span>Minutes</span></div>
+			<div  style="width: 25%;">${seconds}<span>Seconds</span></div>
+  		`;
+	} 
+else {
+	countdown.innerHTML = `
+			<div  style="width: 25%;">${days}<span><center>&nbsp&nbspDays</center></span></div>
+			<div  style="width: 25%;">${hours}<span><center>Hours</center></span></div>
+			<div  style="width: 25%;">${mins}<span><center>Minutes</center></span></div>
+			<div  style="width: 25%;">${seconds}<span><center>Seconds</center></span></div>
+  		`;
+} 
 
     // If launch date is reached
     if (distance < 0) {

@@ -82,7 +82,7 @@
 									<p>Please fill in the details given below to register for the events.</p>
 								</header>
 								<hr />
-								<form>
+								<form id="registerSubmit">
 									<div style='margin: auto; width: 50%;'>
 											<div class="select-wrapper">
 												<select name="event" id="event" onChange="costFunc(this);" required>
@@ -257,7 +257,73 @@
 					document.getElementById("register_cost").textContent = 30*c;
 			}
 			
+			/*/document.getElementById('registerSubmit').addEventListener('submit',addPosts);
+			document.getElementById('registerSubmit').addEventListener('click', getText);
+
+			function addPosts(e){
+				e.preventDefault();
+				var yourSelect = document.getElementById( "event" );
+
+				var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+				var name1 = document.getElementById("name1").value;
+				var phoneNo1 = document.getElementById("phNo").value;
+				var email1 = document.getElementById("email").value;
+				var name2 = document.getElementById("name2").value;
+				var name3 = document.getElementById("name3").value;
+				var college = document.getElementById("college").value;
+
+				fetch("localhost:1000/registration/add",{
+					method: 'POST',
+					headers:{
+						'Accept':'application/json,text/plain,*//*',
+						'Content-type': 'application/json'
+					},
+					body:JSON.stringify({
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					})
+				}).then((res)=>res.json())
+				  .then((data)=>console.log(data))
+
+			}
 			
+			function getText(){
+					var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var qty = 0;
+					var amount =  document.getElementById("register_cost").value;
+
+					fetch('https://www.krispypapad.com/api/pay/uvce'),{
+					method: 'GET',
+					headers:{
+						'Accept':'application/json,text/plain,*//*',
+						'Content-type': 'application/json'
+					},
+					parameters:JSON.stringify({
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					})
+					
+					.then(function(data){
+					       console.log(data);
+					})
+					.catch((err) => console.log(err))
+				}
+			}*/
 			</script>
 	</body>
 </html>

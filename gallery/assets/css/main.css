@@ -4383,3 +4383,9 @@ body{
     margin-right: auto;
     position: relative;
 }
+
+.carousel-indicators{
+	left: 0px;
+	width: 100%;
+	margin-left: 0;
+}

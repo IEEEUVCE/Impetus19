@@ -88,7 +88,7 @@
 									</div>
 									<br>
                                     <div style="margin: auto; width: 50%;">
-										<input type="text" name="number" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
+										<input type="text" name="phNo" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
 									</div>
 									<br>
 									<div style="margin: auto; width: 50%;">
@@ -132,7 +132,8 @@
                                                                 </div>
                                                                 <br>
 									<div style='margin: auto; width: 50%;'>
-										<strong><span style='color: white;'><input type="submit" value="Register" class="button fit">r</span></strong>
+										<!----onclick="apiCall()"-->
+										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
                                         <div class="align-center" style='color: #f96c0d'>Approximate amount to be paid : Rs. <span id='register_cost'>30</span></div>
                                          </div>
 									</div>
@@ -146,21 +147,22 @@
 			</section>
 
 		
-<!-- Social-contacts -->
-<div class="social-icons">
-	<a href="https://www.facebook.com/impetusuvce">
-		<i class="fab fa-facebook-f"></i>
-	</a>
-	<a href="https://twitter.com/ieeeuvce">
-		<i class="fab fa-twitter"></i>
-	</a>
-	<a href="https://www.instagram.com/ieeeuvce/">
-		<i class="fab fa-instagram"></i>
-	</a>
-	<a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow">
-		<i class="fab fa-youtube"></i>
-	</a>
-</div>    
+
+	<!-- Social-contacts -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/impetusuvce" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/ieeeuvce" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ieeeuvce/" target="_blank"> 
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
 		<!-- Footer -->
 			<footer id="footer">
 				
@@ -260,6 +262,63 @@
 
 				
 			}
+			
+			
 			</script>
 	</body>
 </html>
+
+
+<!--
+	function apiCall(){
+				//apiCall1();
+				apiCall2();
+			}
+			function apiCall1(){
+					var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var name2 = document.getElementById("name2").value;
+					var name3 = document.getElementById("name3").value;
+					var college = document.getElementById("college").value;
+				
+					const url = 'localhost:1000/registration/add';
+					// The data we are going to send in our request
+					let data = {
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					}
+					// The parameters we are gonna pass to the fetch function
+					let fetchData = { 
+						method: 'POST', 
+						body: data,
+						headers: new Headers()
+					}
+					fetch(url, fetchData)
+					.then(function() {
+						confirm("Do you want to continue ?");
+						// Handle response you get from the server
+					});
+			}
+			function apiCall2(){
+				 	var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var qty = 0;
+					var amount =  parseInt(document.getElementById("cost").value);
+
+					
+					window.location.replace("https://www.krispypapad.com/api/pay/uvce?name=name1&email=email1&mobile=phoneNo1&event_id=eventNo&qty=qty&amount=30");
+
+			}-->

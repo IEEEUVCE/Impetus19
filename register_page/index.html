@@ -83,6 +83,22 @@
 								</header>
 								<hr />
 								<form>
+									<div style='margin: auto; width: 50%;'>
+											<div class="select-wrapper">
+												<select name="event" id="event" onChange="costFunc(this);" required>
+													<option value="">- Event -</option>
+													<option value="1">RobIT</option>
+													<option value="2">CodeStorm</option>
+													<option value="3">Summit</option>
+													<option value="4">Lazer Tag</option>
+													<option value="5">Steal Jobs</option>
+													<option value="6">Line Seguidor</option>
+													<option value="7">Epsilon</option>
+													<option value="8">Web Development</option>
+												</select>
+											</div>
+									</div>
+									<br>
 									<div style="margin: auto; width: 50%;">
 										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
 									</div>
@@ -111,30 +127,10 @@
 										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
 									<br>
-									<div style="margin: auto; width: 50%;">
-									<input type="text" name="cost" id="cost" value="0"  readonly>
-									</div>
-									<br>
-									<div style='margin: auto; width: 50%;'>
-                                                                    <div class="select-wrapper">
-													<select name="event" id="event" onChange="costFunc(this);" required>
-														<option value="">- Event -</option>
-														<option value="1">RobIT</option>
-														<option value="2">CodeStorm</option>
-														<option value="3">Summit</option>
-														<option value="4">Lazer Tag</option>
-														<option value="5">Steal Jobs</option>
-														<option value="6">Line Seguidor</option>
-														<option value="7">Epsilon</option>
-														<option value="8">Web Development</option>
-													</select>
-												</div>
-                                                                </div>
-                                                                <br>
 									<div style='margin: auto; width: 50%;'>
 										<!----onclick="apiCall()"-->
 										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
-                                        <div class="align-center" style='color: #f96c0d'>Approximate amount to be paid : Rs. <span id='register_cost'>30</span></div>
+                                        <div class="align-center" style='color: #f96c0d'>Approximate amount to be paid : Rs. <span id="register_cost">0</span></div>
                                          </div>
 									</div>
 
@@ -244,23 +240,21 @@
 					c++;
 				}
 				if(eventSelected=="RobIT")
-					document.getElementById("cost").value = 30*c;
+					document.getElementById("register_cost").textContent = 30*c;
 				else if(eventSelected=="CodeStorm")
-					document.getElementById("cost").value = 30*c;
+					document.getElementById("register_cost").textContent = 30*c;
 				else if(eventSelected=="Summit")
-					document.getElementById("cost").value = 0*c;
+					document.getElementById("register_cost").textContent = 0*c;
 				else if(eventSelected=="Lazer Tag")
-					document.getElementById("cost").value = 70*c;
+					document.getElementById("register_cost").textContent = 70*c;
 				else if(eventSelected=="Steal Jobs")
-					document.getElementById("cost").value = 30*c;
+					document.getElementById("register_cost").textContent = 30*c;
 				else if(eventSelected=="Line Seguidor")
-					document.getElementById("cost").value = 30*c;
+					document.getElementById("register_cost").textContent = 30*c;
 				else if(eventSelected=="Epsilon")
-					document.getElementById("cost").value = 0*c;
+					document.getElementById("register_cost").textContent = 0*c;
 				else if(eventSelected=="Web Development")
-					document.getElementById("cost").value = 30*c;
-
-				
+					document.getElementById("register_cost").textContent = 30*c;
 			}
 			
 			

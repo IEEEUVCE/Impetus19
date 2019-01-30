@@ -83,7 +83,7 @@
 								</header>
 								<hr />
 								<form id="registerSubmit">
-									<div style='margin: auto; width: 50%;'>
+									<div id="devent">
 											<div class="select-wrapper">
 												<select name="event" id="event" onChange="costFunc(this);" required>
 													<option value="">- Event -</option>
@@ -99,38 +99,38 @@
 											</div>
 									</div>
 									<br>
-									<div style="margin: auto; width: 50%;">
+									<div id="dname1">
 										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
 									</div>
 									<br>
-                                    <div style="margin: auto; width: 50%;">
+                                    <div id="dphNo">
 										<input type="text" name="phNo" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
 									</div>
 									<br>
-									<div style="margin: auto; width: 50%;">
+									<div id="demail">
 										<input type="email" name="email" id="email"  placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
 									</div>
 									<br id="br2">
-									<div style="margin: auto; width: 50%;">
+									<div id="dname2">
 										<input type="text" name="name2" id="name2"  placeholder="Team Member 2's Name " onkeyup="costFunc(this);"/>
 									</div>
 									<br>
-									<div style="margin: auto; width: 50%;">
+									<div id="dname3">
 										<input type="text" name="name3" id="name3" placeholder="Team Member 3's Name" onkeyup="costFunc(this);"/>
 									</div>
 									<br id="br3">
-									<div style="margin: auto; width: 50%;">
+									<div id="dname4">
 										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" onkeyup="costFunc(this);"/>
 									</div>
 									<br id="br4">
-									<div style="margin: auto; width: 50%;">
+									<div id="dcollege">
 										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
 									<br>
-									<div style='margin: auto; width: 50%;'>
+									<div id="dreg_btn">
 										<!----onclick="apiCall()"-->
 										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
-                                        <div class="align-center" style='color: #f96c0d'>Approximate amount to be paid : Rs. <span id="register_cost">0</span></div>
+                                        <div class="align-center" style='color: #f96c0d' id="dpayment_hint">Approximate amount to be paid : Rs. <span id="register_cost">0</span></div>
                                          </div>
 									</div>
 

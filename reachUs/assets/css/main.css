@@ -48,6 +48,26 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
+	
+	#form-website {
+		visibility: visible;
+	}
+	
+	
+	@media screen and (max-width: 480px) {
+		#form-website {
+		visibility: collapse;
+	}
+	
+	
+	#contact-td-left {
+		width: 100%;
+	}
+	
+	#super-table {
+		margin-left: 4%;
+	}
+	}
 
 /* Box Model */
 

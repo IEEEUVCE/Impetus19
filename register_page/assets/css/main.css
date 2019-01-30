@@ -48,6 +48,24 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
+	
+	#dname1, #dname2, #dname3, #dname4, #dphNo, #demail, #dcollege, #devent, #dreg_btn {
+			margin: auto;
+			width: 50%;
+		}
+		
+	#dpayment_hint {
+			margin: auto;
+			width: 100%;
+	}
+	
+	@media screen and (max-width: 480px) {
+		#dname1, #dname2, #dname3, #dname4, #dphNo, #demail, #dcollege, #devent, #dreg_btn {
+			margin: auto;
+			width: 90%;
+		}
+		
+	}
 
 /* Box Model */
 

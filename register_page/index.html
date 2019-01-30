@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Register</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+               
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="../index.html">Impetus 2k19 </a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about/index.html">About</a></li>
+					<li><a href="../events/index.html">Events</a></li>
+                                        <li><a href="../register_page/index.html">Register</a></li>
+                                        <li><a href="../gallery/index.html">Gallery</a></li>
+                                        <li><a href="../Sponsors/index.html">Sponsors</a></li>
+                                        <li><a href="../reachUs/index.html">Reach Us</a></li>
+                                        <li><a href="../epsilon/index.html">Epsilon</a></li>
+				</ul>
+			</nav>
+         
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+		-->
+		<!--	<section id="banner">
+				<div class="inner">
+					<h1>Impetus 2k19</h1>
+					<p>UVCE's Biggest Technical Fest<br /> <br />
+					<a href="#Countdown_Timer" class="button special scrolly">Know More</a>
+				</div>
+			</section> -->
+                
+                <!-- Countdown Timer -->
+                <!--
+               <section id ="Countdown_Timer" class="wrapper style2">
+                    <div class="inner">
+                        <div class="box">
+                            <div class="content">
+                                <header class="align-center">
+                                <h2>Countdown</h2>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div>
+						<div class="box">
+							<div class="image fit" style="background-color:#1E1E1E;">
+                                    
+								<center><img src="images/Technology-Image-01.png" alt="" style="width:50%;"/></center>
+                                                                
+							</div>
+							<div class="content">
+								<header class="align-center">
+									<h2>Register Now!</h2>
+									<p>Please fill in the details given below to register for the events.</p>
+								</header>
+								<hr />
+								<form id="registerSubmit">
+									<div style='margin: auto; width: 50%;'>
+											<div class="select-wrapper">
+												<select name="event" id="event" onChange="costFunc(this);" required>
+													<option value="">- Event -</option>
+													<option value="1">RobIT</option>
+													<option value="2">CodeStorm</option>
+													<option value="3">Summit</option>
+													<option value="4">Lazer Tag</option>
+													<option value="5">Steal Jobs</option>
+													<option value="6">Line Seguidor</option>
+													<option value="7">Epsilon</option>
+													<option value="8">Web Development</option>
+												</select>
+											</div>
+									</div>
+									<br>
+									<div style="margin: auto; width: 50%;">
+										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
+									</div>
+									<br>
+                                    <div style="margin: auto; width: 50%;">
+										<input type="text" name="phNo" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
+									</div>
+									<br>
+									<div style="margin: auto; width: 50%;">
+										<input type="email" name="email" id="email"  placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+									</div>
+									<br id="br2">
+									<div style="margin: auto; width: 50%;">
+										<input type="text" name="name2" id="name2"  placeholder="Team Member 2's Name " onkeyup="costFunc(this);"/>
+									</div>
+									<br>
+									<div style="margin: auto; width: 50%;">
+										<input type="text" name="name3" id="name3" placeholder="Team Member 3's Name" onkeyup="costFunc(this);"/>
+									</div>
+									<br id="br3">
+									<div style="margin: auto; width: 50%;">
+										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" onkeyup="costFunc(this);"/>
+									</div>
+									<br id="br4">
+									<div style="margin: auto; width: 50%;">
+										<input type="text" name="college" id="college"  placeholder="College Name" required/>
+									</div>
+									<br>
+									<div style='margin: auto; width: 50%;'>
+										<!----onclick="apiCall()"-->
+										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
+                                        <div class="align-center" style='color: #f96c0d'>Approximate amount to be paid : Rs. <span id="register_cost">0</span></div>
+                                         </div>
+									</div>
+
+								</form>				
+									
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+		
+
+	<!-- Social-contacts -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/impetusuvce" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/ieeeuvce" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ieeeuvce/" target="_blank"> 
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+		<!-- Footer -->
+			<footer id="footer">
+				
+                            <br>
+					<div class="copyright" style='background-color: rgba(30, 30, 30, 1);'>
+						&copy; IEEE UVCE : <a href="https://ieeeuvce.in/">ieeeuvce.in</a>
+					</div>
+				
+			</footer>
+                
+                
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script >
+			function costFunc() {
+				var yourSelect = document.getElementById( "event" );
+				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
+				  c=0;
+				if(eventSelected=="RobIT" || eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+				}
+				else if(eventSelected=="CodeStorm"){//max2
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'none ';
+					document.getElementById('name3').value = "";
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'none ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				else if(eventSelected=="Summit" || eventSelected=="Web Development"){//max3
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				else if(eventSelected=="Steal Jobs" || eventSelected=="Epsilon"){
+					document.getElementById('name2').style.display = 'none ';
+					document.getElementById('name2').value = "";
+					document.getElementById('name3').style.display = 'none ';
+					document.getElementById('name3').value = "";
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'none ';
+					document.getElementById('br3').style.display = 'none ';
+					document.getElementById('br4').style.display = 'none ';
+				}
+				
+
+
+
+
+
+				if (document.getElementById('name1').value != "" ){
+					c++;
+				}
+				if (document.getElementById('name2').value != ""){
+					c++;
+				}
+				if (document.getElementById('name3').value != "" ){
+					c++;
+				}
+				if (document.getElementById('name4').value != ""){
+					c++;
+				}
+				if(eventSelected=="RobIT")
+					document.getElementById("register_cost").textContent = 30*c;
+				else if(eventSelected=="CodeStorm")
+					document.getElementById("register_cost").textContent = 30*c;
+				else if(eventSelected=="Summit")
+					document.getElementById("register_cost").textContent = 0*c;
+				else if(eventSelected=="Lazer Tag")
+					document.getElementById("register_cost").textContent = 70*c;
+				else if(eventSelected=="Steal Jobs")
+					document.getElementById("register_cost").textContent = 30*c;
+				else if(eventSelected=="Line Seguidor")
+					document.getElementById("register_cost").textContent = 30*c;
+				else if(eventSelected=="Epsilon")
+					document.getElementById("register_cost").textContent = 0*c;
+				else if(eventSelected=="Web Development")
+					document.getElementById("register_cost").textContent = 30*c;
+			}
+			
+			/*/document.getElementById('registerSubmit').addEventListener('submit',addPosts);
+			document.getElementById('registerSubmit').addEventListener('click', getText);
+
+			function addPosts(e){
+				e.preventDefault();
+				var yourSelect = document.getElementById( "event" );
+
+				var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+				var name1 = document.getElementById("name1").value;
+				var phoneNo1 = document.getElementById("phNo").value;
+				var email1 = document.getElementById("email").value;
+				var name2 = document.getElementById("name2").value;
+				var name3 = document.getElementById("name3").value;
+				var college = document.getElementById("college").value;
+
+				fetch("localhost:1000/registration/add",{
+					method: 'POST',
+					headers:{
+						'Accept':'application/json,text/plain,*//*',
+						'Content-type': 'application/json'
+					},
+					body:JSON.stringify({
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					})
+				}).then((res)=>res.json())
+				  .then((data)=>console.log(data))
+
+			}
+			
+			function getText(){
+					var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var qty = 0;
+					var amount =  document.getElementById("register_cost").value;
+
+					fetch('https://www.krispypapad.com/api/pay/uvce'),{
+					method: 'GET',
+					headers:{
+						'Accept':'application/json,text/plain,*//*',
+						'Content-type': 'application/json'
+					},
+					parameters:JSON.stringify({
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					})
+					
+					.then(function(data){
+					       console.log(data);
+					})
+					.catch((err) => console.log(err))
+				}
+			}*/
+			</script>
+	</body>
+</html>
+
+
+<!--
+	function apiCall(){
+				//apiCall1();
+				apiCall2();
+			}
+			function apiCall1(){
+					var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var name2 = document.getElementById("name2").value;
+					var name3 = document.getElementById("name3").value;
+					var college = document.getElementById("college").value;
+				
+					const url = 'localhost:1000/registration/add';
+					// The data we are going to send in our request
+					let data = {
+						name1: name1,
+						name2:name2,
+						name3: name3,
+						eventNo : eventNo,
+						phoneNo1: phoneNo1,
+						email: email,
+						college: college
+					}
+					// The parameters we are gonna pass to the fetch function
+					let fetchData = { 
+						method: 'POST', 
+						body: data,
+						headers: new Headers()
+					}
+					fetch(url, fetchData)
+					.then(function() {
+						confirm("Do you want to continue ?");
+						// Handle response you get from the server
+					});
+			}
+			function apiCall2(){
+				 	var yourSelect = document.getElementById( "event" );
+					
+					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
+					var name1 = document.getElementById("name1").value;
+					var phoneNo1 = document.getElementById("phNo").value;
+					var email1 = document.getElementById("email").value;
+					var qty = 0;
+					var amount =  parseInt(document.getElementById("cost").value);
+
+					
+					window.location.replace("https://www.krispypapad.com/api/pay/uvce?name=name1&email=email1&mobile=phoneNo1&event_id=eventNo&qty=qty&amount=30");
+
+			}-->

@@ -82,10 +82,11 @@
 									<p>Please fill in the details given below to register for the events.</p>
 								</header>
 								<hr />
-								<form id="registerSubmit">
+							
+								<form id="registerSubmit" action="https://www.krispypapad.com/api/pay/uvce" method="GET">
 									<div id="devent">
 											<div class="select-wrapper">
-												<select name="event" id="event" onChange="costFunc(this);" required>
+												<select name="event_id" id="event_id" onChange="costFunc(this);" required>
 													<option value="">- Event -</option>
 													<option value="1">RobIT</option>
 													<option value="2">CodeStorm</option>
@@ -100,11 +101,11 @@
 									</div>
 									<br>
 									<div id="dname1">
-										<input type="text" name="name1" id="name1"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
+										<input type="text" name="name" id="name"  placeholder="Team Member 1's Name" required  onkeyup="costFunc(this);"/>
 									</div>
 									<br>
                                     <div id="dphNo">
-										<input type="text" name="phNo" id="phNo" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
+										<input type="text" name="mobile" id="mobile" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
 									</div>
 									<br>
 									<div id="demail">
@@ -127,10 +128,18 @@
 										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
 									<br>
+									<div id="dcollege">
+											Quantity:<input type="text" name="qty" id="qty"  default="0" readonly/>
+										</div>
+										<br>
+									<div id="dcollege">
+										Approximate Amount to be paid: <input type="text" name="amount" id="amount"  default="0" readonly/>
+									</div>
+									<br>
 									<div id="dreg_btn">
 										<!----onclick="apiCall()"-->
 										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
-                                        <div class="align-center" style='color: #f96c0d' id="dpayment_hint">Approximate amount to be paid : Rs. <span id="register_cost">0</span></div>
+                                        <div class="align-center" style='color: #f96c0d' id="dpayment_hint">Approximate amount to be paid : Rs. <span id="amount"></span>0</span></div>
                                          </div>
 									</div>
 
@@ -160,15 +169,15 @@
         </a>
     </div>
 		<!-- Footer -->
-		<footer id="footer">
+			<footer id="footer">
 				
-			<br>
-	<div class="copyright" style='background-color: rgba(30, 30, 30, 1);'>
-		&copy; IEEE UVCE : <a href="ieeeuvce.in">ieeeuvce.in</a>
-	</div>
-
-</footer>
-
+                            <br>
+					<div class="copyright" style='background-color: rgba(30, 30, 30, 1);'>
+						&copy; IEEE UVCE : <a href="ieeeuvce.in">ieeeuvce.in</a>
+					</div>
+				
+			</footer>
+                
                 
 
 		<!-- Scripts -->
@@ -180,7 +189,7 @@
 			<script src="assets/js/main.js"></script>
 			<script >
 			function costFunc() {
-				var yourSelect = document.getElementById( "event" );
+				var yourSelect = document.getElementById( "event_id" );
 				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
 				  c=0;
 				if(eventSelected=="RobIT" || eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
@@ -227,34 +236,38 @@
 
 
 
-				if (document.getElementById('name1').value != "" ){
+				if (document.getElementById('name').value != "" ){
 					c++;
+					document.getElementById('qty').value = c;
 				}
 				if (document.getElementById('name2').value != ""){
 					c++;
+					document.getElementById('qty').value = c;
 				}
 				if (document.getElementById('name3').value != "" ){
 					c++;
+					document.getElementById('qty').value = c;
 				}
 				if (document.getElementById('name4').value != ""){
 					c++;
+					document.getElementById('qty').value = c;
 				}
 				if(eventSelected=="RobIT")
-					document.getElementById("register_cost").textContent = 30*c;
+					document.getElementById("amount").value = 30*c;
 				else if(eventSelected=="CodeStorm")
-					document.getElementById("register_cost").textContent = 30*c;
+					document.getElementById("amount").value = 30*c;
 				else if(eventSelected=="Summit")
-					document.getElementById("register_cost").textContent = 0*c;
+					document.getElementById("amount").value = 0*c;
 				else if(eventSelected=="Lazer Tag")
-					document.getElementById("register_cost").textContent = 70*c;
+					document.getElementById("amount").value = 70*c;
 				else if(eventSelected=="Steal Jobs")
-					document.getElementById("register_cost").textContent = 30*c;
+					document.getElementById("amount").value = 30*c;
 				else if(eventSelected=="Line Seguidor")
-					document.getElementById("register_cost").textContent = 30*c;
+					document.getElementById("amount").value = 30*c;
 				else if(eventSelected=="Epsilon")
-					document.getElementById("register_cost").textContent = 0*c;
+					document.getElementById("amount").value = 0*c;
 				else if(eventSelected=="Web Development")
-					document.getElementById("register_cost").textContent = 30*c;
+					document.getElementById("amount").value = 30*c;
 			}
 			
 			/*/document.getElementById('registerSubmit').addEventListener('submit',addPosts);
@@ -265,8 +278,8 @@
 				var yourSelect = document.getElementById( "event" );
 
 				var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
-				var name1 = document.getElementById("name1").value;
-				var phoneNo1 = document.getElementById("phNo").value;
+				var name = document.getElementById("name").value;
+				var phoneNo1 = document.getElementById("mobile").value;
 				var email1 = document.getElementById("email").value;
 				var name2 = document.getElementById("name2").value;
 				var name3 = document.getElementById("name3").value;
@@ -279,7 +292,7 @@
 						'Content-type': 'application/json'
 					},
 					body:JSON.stringify({
-						name1: name1,
+						name: name,
 						name2:name2,
 						name3: name3,
 						eventNo : eventNo,
@@ -296,11 +309,11 @@
 					var yourSelect = document.getElementById( "event" );
 					
 					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
-					var name1 = document.getElementById("name1").value;
-					var phoneNo1 = document.getElementById("phNo").value;
+					var name = document.getElementById("name").value;
+					var phoneNo1 = document.getElementById("mobile").value;
 					var email1 = document.getElementById("email").value;
 					var qty = 0;
-					var amount =  document.getElementById("register_cost").value;
+					var amount =  document.getElementById("amount").value;
 
 					fetch('https://www.krispypapad.com/api/pay/uvce'),{
 					method: 'GET',
@@ -309,7 +322,7 @@
 						'Content-type': 'application/json'
 					},
 					parameters:JSON.stringify({
-						name1: name1,
+						name: name,
 						name2:name2,
 						name3: name3,
 						eventNo : eventNo,
@@ -338,8 +351,8 @@
 					var yourSelect = document.getElementById( "event" );
 					
 					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
-					var name1 = document.getElementById("name1").value;
-					var phoneNo1 = document.getElementById("phNo").value;
+					var name = document.getElementById("name").value;
+					var phoneNo1 = document.getElementById("mobile").value;
 					var email1 = document.getElementById("email").value;
 					var name2 = document.getElementById("name2").value;
 					var name3 = document.getElementById("name3").value;
@@ -348,7 +361,7 @@
 					const url = 'localhost:1000/registration/add';
 					// The data we are going to send in our request
 					let data = {
-						name1: name1,
+						name: name,
 						name2:name2,
 						name3: name3,
 						eventNo : eventNo,
@@ -372,13 +385,13 @@
 				 	var yourSelect = document.getElementById( "event" );
 					
 					var eventNo = yourSelect.options[ yourSelect.selectedIndex ].text;
-					var name1 = document.getElementById("name1").value;
-					var phoneNo1 = document.getElementById("phNo").value;
+					var name = document.getElementById("name").value;
+					var phoneNo1 = document.getElementById("mobile").value;
 					var email1 = document.getElementById("email").value;
 					var qty = 0;
 					var amount =  parseInt(document.getElementById("cost").value);
 
 					
-					window.location.replace("https://www.krispypapad.com/api/pay/uvce?name=name1&email=email1&mobile=phoneNo1&event_id=eventNo&qty=qty&amount=30");
+					window.location.replace("https://www.krispypapad.com/api/pay/uvce?name=name&email=email1&mobile=phoneNo1&event_id=eventNo&qty=qty&amount=30");
 
 			}-->

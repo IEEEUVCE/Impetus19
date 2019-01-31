@@ -1,31 +1,64 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>Impetus 2k19</title>
-    <meta charset="utf-8" />
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Impetus 19.0</title>
+  <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-	<script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.ui.min.js"></script>
-
-    <style>
-        .mainDiv
-{
-    
-    align-items: center;
-    /*justify-content: space-around;*/
-    justify-content: center;
-    font-family: 'Roboto';
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    h2{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e1d;
+  font-size:1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+html,body,div,span,h2{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;}
+html,body{ 
+  width:100%;
+  height:100%;
+  background:#000;
+}
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url('assets/images/title-04.svg');
+  background-size: 50%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+}
+/*h1::after{
+  content: '';
+  background: #efefef;
+  display: block; 
+  height: 3px;
+  width: 250px;
+  margin: 5px auto 5px;
+}*/
+h2.span{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e1d;
+  font-size: 20px;
+ 
 }
 .countdown {
     font-size: 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
     left: 37%;
     bottom: 5%;
     animation: timer-down 2s ease-in 7s;
@@ -33,344 +66,107 @@
 }
 .countdown div {
     padding: 15px 20px;
-    border: 2px solid #f96c0d;
-    border-radius: 10px;
+    border: 1px #f96c0d solid;
+	border-radius: 10px;
 	color: white;
-    background-color: black;
+    background: black;
     opacity: 0.8;
     margin: 3px;
 }
 .countdown span {
     display: block;
-    font-size: 15px;
-}
-.countdown1{
-	width:40%;
-}
-/* <!-countdown for mobile screens> */
-@media screen and (max-width: 430px) {
-.countdown {
-    font-size: 20px;
-    display: flex;  
-    animation: timer-down 2s ease-in 7s;
-    animation-fill-mode: both;
-}
-.countdown div {
-   
-    border: 2px solid #f96c0d;
-	border-radius: 10px;
-	color: white;
-    background-color: black;
-	opacity: 0.8;
-}
-.countdown span {
-    display: block;
-	font-size: 10px;
-	margin: -8px;
-	text-align: center;
-
-}
-.countdown1{
-	width:100%;
-	margin-left: -5%;
+	font-size: 15px;
 	
 }
-}
-</style>
+  </style>
+  
 </head>
-
 <body>
 
-    <!-- Header -->
-    <header id="header" class="alt">
-        <div class="logo"><a href="../index.html">Impetus 19.0 </a></div>
-        <a href="#menu" class="toggle"><span>Menu</span></a>
-    </header>
 
-    <!-- Nav -->
-    <nav id="menu">
-        <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about/index.html">About</a></li>
-            <li><a href="events/index.html">Events</a></li>
-            <li><a href="register_page/index.html">Register</a></li>
-            <li><a href="gallery/index.html">Gallery</a></li>
-            <li><a href="Sponsors/index.html">Sponsors</a></li>
-            <li><a href="reachUs/index.html">Reach Us</a></li>
-            <li><a href="epsilon/index.html">Epsilon</a></li>
-        </ul>
-    </nav>
+<!-- Header -->
+<header id="header" class="alt">
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+</header>
 
-    <!-- Banner -->
-    <!--
-			To use a video as your background, set data-video to the name of your video without
-			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-			formats to work correctly.
-		-->
-    <section id="banner" style="background: #000;">
-        <!-- <video autoplay muted loop>
-            <source src="images/Banner.mp4" type="video/mp4">
-        </video> -->
-        <div class="inner">
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about/index.html">About</a></li>
+        <li><a href="events/index.html">Events</a></li>
+        <li><a href="register_page/index.html">Register</a></li>
+        <li><a href="gallery/index.html">Gallery</a></li>
+        <li><a href="Sponsors/index.html">Sponsors</a></li>
+        <li><a href="reachUs/index.html">Reach Us</a></li>
+        <li><a href="epsilon/index.html">Epsilon</a></li>
+    </ul>
+</nav>
 
-            <!--<br />
-                                        <br />
-                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-            <a href="#maintitle" class="button special scrolly" id="title_fest">Know More</a>
-        </div>
-    </section>
+<!-- particles.js container -->
+    <div id="particles-js"></div>
+    <div class="countdown"></div>
+<!-- scripts -->
+ <!-- Scripts -->
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/jquery.scrolly.min.js"></script>
+ <script src="assets/js/jquery.scrollex.min.js"></script>
+ <script src="assets/js/skel.min.js"></script>
+ <script src="assets/js/util.js"></script>
+ <script src="assets/js/main.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+	const countdown = document.querySelector('.countdown');
 
+	// Set Launch Date (ms)
+	const launchDate = new Date('Mar 29, 2019 09:00:00').getTime();
 
-    <section id="maintitle" class="wrapper style2">
-        <div class="inner">
-            <div class="box">
-                <div class="content">
-                    <header class="align-center">
-                        <h2 style="margin-bottom: 10px; font-weight: bold; font-size: 40px;">IMPETUS 19.0</h2>
-                        <h2 style="margin-bottom: 7px;">Techfusion: Redefining Possibilities</h2>
-                        <img src="logo.png" alt="Impetus Logo" style="width: 150px; height: 150px;margin-top: 10px;">
-                    </header>
-                    <div class="inner">
-                        <a href="#Countdown_Timer" class="button special scrolly" id="count_btn" style="width:0; height:0;"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	// Update every second
+	const intvl = setInterval(() => {
+		// Get todays date and time (ms)
+		const now = new Date().getTime();
 
-    <!-- Countdown Timer -->
-    <section id="Countdown_Timer" class="wrapper style2">
-        <div class="inner">
-            <div class="box">
-                <div class="content">
-                    <header class="align-center">
-                        <h2 style="margin-bottom: 10px; margin-top: 7px;">Countdown</h2>
-                        <hr />
-                    </header>
-                    <center>
-                        <div class="countdown1">
+		// Distance from now and the launch date (ms)
+		const distance = launchDate - now;
 
-                            <div class="countdown"></div>
+		// Time calculation
+		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		const hours = Math.floor(
+			(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                        </div>
-                    </center>
+		// Display result
+		// Display result
+		if (screen.width > 430) {
+			countdown.innerHTML =
+				`
+		<div  style="width: 25%;">${days}<span>&nbsp&nbspDays&nbsp&nbsp</span></div>
+		<div  style="width: 25%;">${hours}<span>&nbspHours&nbsp</span></div>
+		<div  style="width: 25%;">${mins}<span>Minutes</span></div>
+		<div  style="width: 25%;">${seconds}<span>Seconds</span></div>
+	  `;
+		} else {
+			countdown.innerHTML =
+				`
+		<div  style="width: 25%;">${days}<span><center>&nbsp&nbspDays</center></span></div>
+		<div  style="width: 25%;">${hours}<span><center>Hours</center></span></div>
+		<div  style="width: 25%;">${mins}<span><center>Minutes</center></span></div>
+		<div  style="width: 25%;">${seconds}<span><center>Seconds</center></span></div>
+	  `;
+		}
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social-contacts -->
-    <div class="social-icons">
-        <a href="https://www.facebook.com/impetusuvce" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com/ieeeuvce" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/ieeeuvce/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-    <!-- Footer -->
-			<footer id="footer">
-				
-                <br>
-        <div class="copyright" style='background-color: rgba(30, 30, 30, 1);'>
-            &copy; IEEE UVCE : <a href="ieeeuvce.in">ieeeuvce.in</a>
-        </div>
-    
-</footer>
-    
-
-
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <script>
-        /*********************
-           Device Detection
-        *********************/
-        var isWebkit = /Webkit/i.test(navigator.userAgent),
-            isChrome = /Chrome/i.test(navigator.userAgent),
-            isMobile = !!("ontouchstart" in window),
-            isAndroid = /Android/i.test(navigator.userAgent),
-            isIE = document.documentMode;
-        /***************
-            Helpers
-        ***************/
-        /* Randomly generate an integer between two numbers. */
-        function r(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        /* Override the default easing type with something a bit more jazzy. */
-        $.Velocity.defaults.easing = "easeInOutsine";
-        /*******************
-            Dot Creation
-        *******************/
-        /* Differentiate dot counts based on roughly estimated device and browser capabilities. */
-        var dotsCount,
-            dotsHtml = "",
-            $count = $("#count"),
-            $dots;
-        if (window.location.hash) {
-            dotsCount = window.location.hash.slice(1);
-        } else {
-            dotsCount = isMobile ? (isAndroid ? 150 : 150) : (isChrome ? 500 : 200);    //dountsCount = isMobile ? (isAndroid ? 40 : 60) : (isChrome)
-        }
-        for (var i = 0; i < dotsCount; i++) {
-            dotsHtml += "<div class='dot'></div>";
-        }
-        $dots = $(dotsHtml);
-        $count.html(dotsCount);
-        /*************
-            Setup
-        *************/
-        var $container = $("#container"),
-            $browserWidthNotice = $("#browserWidthNotice"),
-            $welcome = $("#welcome");
-        var screenWidth = window.screen.availWidth,
-            screenHeight = window.screen.availHeight,
-            chromeHeight = screenHeight - (document.documentElement.clientHeight || screenHeight);
-        var translateZMin = -725,
-            translateZMax = 600;
-        var containerAnimationMap = {
-            perspective: [215, 20],
-            opacity: [0.9, 0.35]
-        };
-        /* IE10+ fucks up 3D transforms so. Chrome Zindabad*/
-        if (!isIE) {
-            containerAnimationMap.rotateZ = [5, 0];
-        }
-        /* Ensure the user is full-screened; translations are relative to screen width, not window width. */
-        if ((document.documentElement.clientWidth / screenWidth) < 0.80) {
-            $browserWidthNotice.show();
-        }
-        /*****************
-            Animation
-        *****************/
-        /* Fade out the welcome message. */
-        $welcome.velocity({ opacity: [0.65, 0.01] }, { display: "block", delay: 0, duration: 3000 });
-        $welcome.velocity({ opacity: [0, 0.65] }, { display: "none", delay: 1000, duration: 3500 });
-        /* Animate the dots' container. */
-        $container
-            .css("perspective-origin", screenWidth / 2 + "px " + ((screenHeight * 0.45) - chromeHeight) + "px")
-            .velocity(containerAnimationMap, { duration: 2500, loop: 0, delay: 4500 });
-        /* Special visual enhancement for WebKit browsers, which are faster at box-shadow manipulation. */
-        if (isWebkit) {
-            $dots.css("boxShadow", "0px 0px 4px 0px #4bc2f1");
-        }
-        /* Animate the dots. */
-        $dots
-            .velocity({
-                translateX: [
-                    function () { return "+=" + r(-screenWidth / 2.5, screenWidth / 2.5) },
-                    function () { return r(0, screenWidth) }
-                ],
-                translateY: [
-                    function () { return "+=" + r(-screenHeight / 2.75, screenHeight / 2.75) },
-                    function () { return r(0, screenHeight) }
-                ],
-                translateZ: [
-                    function () { return "+=" + r(translateZMin, translateZMax) },
-                    function () { return r(translateZMin, translateZMax) }
-                ],
-                opacity: [
-                    function () { return Math.random() },
-                    function () { return Math.random() + 0.1 }
-                ]
-            }, { duration: 10000 })      // duration of moving dots
-            // .velocity("reverse", {easing: "easeOutQuad" })
-            .appendTo($container);
+		// If launch date is reached
+		if (distance < 0) {
+			// Stop countdown
+			clearInterval(intvl);
+			document.getElementById('Countdown_Timer').style.display = 'none ';
+		}
+	}, 1000);
 </script>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
-
-        function scrolling1() {
-            var scr1 = document.getElementById("title_fest");
-            scr1.click();
-        }
-
-        setTimeout("scrolling1()", 8000);
-
-
-        function scrolling() {
-            var scr = document.getElementById("count_btn");
-            scr.click();
-        }
-
-        setTimeout("scrolling()", 12000);
-
-
-
-        const countdown = document.querySelector('.countdown');
-
-        // Set Launch Date (ms)
-        const launchDate = new Date('Mar 29, 2019 09:00:00').getTime();
-
-        // Update every second
-        const intvl = setInterval(() => {
-            // Get todays date and time (ms)
-            const now = new Date().getTime();
-
-            // Distance from now and the launch date (ms)
-            const distance = launchDate - now;
-
-            // Time calculation
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-            );
-            const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display result
-            // Display result
-            if (screen.width > 430) {
-                countdown.innerHTML =
-                    `
-			<div  style="width: 25%;">${days}<span>&nbsp&nbspDays&nbsp&nbsp</span></div>
-			<div  style="width: 25%;">${hours}<span>&nbspHours&nbsp</span></div>
-			<div  style="width: 25%;">${mins}<span>Minutes</span></div>
-			<div  style="width: 25%;">${seconds}<span>Seconds</span></div>
-  		`;
-            } else {
-                countdown.innerHTML =
-                    `
-			<div  style="width: 25%;">${days}<span><center>&nbsp&nbspDays</center></span></div>
-			<div  style="width: 25%;">${hours}<span><center>Hours</center></span></div>
-			<div  style="width: 25%;">${mins}<span><center>Minutes</center></span></div>
-			<div  style="width: 25%;">${seconds}<span><center>Seconds</center></span></div>
-  		`;
-            }
-
-            // If launch date is reached
-            if (distance < 0) {
-                // Stop countdown
-                clearInterval(intvl);
-                document.getElementById('Countdown_Timer').style.display = 'none ';
-            }
-        }, 1000);
-    </script>
 
 </body>
-
 </html>

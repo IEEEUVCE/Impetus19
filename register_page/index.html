@@ -128,18 +128,20 @@
 										<input type="text" name="college" id="college"  placeholder="College Name" required/>
 									</div>
 									<br>
-									<div id="dcollege">
-											Quantity:<input type="text" name="qty" id="qty"  default="0" readonly/>
+									<div id="dqty">
+											<label for="lqty">Quantity:&nbsp&nbsp  </label>
+											<input type="text" name="qty" id="qty"  value="0" style="background:#FFFFFF;border:none;" readonly/>
 										</div>
 										<br>
-									<div id="dcollege">
-										Approximate Amount to be paid: <input type="text" name="amount" id="amount"  default="0" readonly/>
+									<div id="damount">
+											<label for="lampunt" >Approximate Amount to be paid:&nbsp&nbsp  </label>
+											<input type="text" name="amount" id="amount"  value="0" style="background:#FFFFFF;border:none;"  readonly/>
 									</div>
 									<br>
 									<div id="dreg_btn">
 										<!----onclick="apiCall()"-->
 										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
-                                        <div class="align-center" style='color: #f96c0d' id="dpayment_hint">Approximate amount to be paid : Rs. <span id="amount"></span>0</span></div>
+                                        
                                          </div>
 									</div>
 

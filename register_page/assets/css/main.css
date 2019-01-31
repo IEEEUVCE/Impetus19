@@ -49,7 +49,7 @@
 		-webkit-text-size-adjust: none;
 	}
 	
-	#dname1, #dname2, #dname3, #dname4, #dphNo, #demail, #dcollege, #devent, #dreg_btn {
+	#dname1, #dname2, #dname3, #dname4, #dphNo, #demail, #dcollege, #devent, #dreg_btn, #dqty,#damount {
 			margin: auto;
 			width: 50%;
 		}
@@ -58,15 +58,18 @@
 			margin: auto;
 			width: 100%;
 	}
+
 	
 	@media screen and (max-width: 480px) {
 		#dname1, #dname2, #dname3, #dname4, #dphNo, #demail, #dcollege, #devent, #dreg_btn {
 			margin: auto;
 			width: 90%;
 		}
+
 		
 	}
 
+	
 /* Box Model */
 
 	*, *:before, *:after {

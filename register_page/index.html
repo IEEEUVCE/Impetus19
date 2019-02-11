@@ -96,6 +96,7 @@
 													<option value="Mock Placement">Mock Placement</option>
 													<option value="Line Seguidor">Line Seguidor</option>
 													<option value="Web Development">Web Development</option>
+													<option value="Tech Roadies">Tech Roadies</option>
 												</select>
 											</div>
 									</div>
@@ -194,7 +195,7 @@
 				var yourSelect = document.getElementById( "event_id" );
 				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
 				  c=0;
-				if(eventSelected=="RobIT" || eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
+				if(eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'block ';
@@ -221,7 +222,7 @@
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'none ';
 				}
-				else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon"){
+				else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon"){//max 1
 					document.getElementById('name2').style.display = 'none ';
 					document.getElementById('name2').value = "";
 					document.getElementById('name3').style.display = 'none ';
@@ -231,6 +232,19 @@
 					document.getElementById('br2').style.display = 'none ';
 					document.getElementById('br3').style.display = 'none ';
 					document.getElementById('br4').style.display = 'none ';
+				}
+				else if(eventSelected=="RobIT" ){//min 3 max4
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = true;
+				}
+				else if(eventSelected=="Tech Roadies"){	//tech roadies registerations
+					window.location.href='http://bit.ly/TechRoadies2019';
 				}
 				
 

@@ -96,7 +96,24 @@
 													<option value="Mock Placement">Mock Placement</option>
 													<option value="Line Seguidor">Line Seguidor</option>
 													<option value="Web Development">Web Development</option>
-													<option value="Tech Roadies">Tech Roadies</option>
+													<!-- <option value="Tech Roadies">Tech Roadies</option> -->
+													<option value="FusionEra">FusionEra</option>
+													<option value="Technocrat">Technocrat</option>
+													<option value="Dare Devil">Dare Devil</option>
+													<option value="RFID Hunt">RFID Hunt</option>
+													<option value="Electronoob">Electronoob</option>
+													<option value="Mechronin">Mechronin</option>
+													<option value="Civitek">Civitek</option>
+													<option value="Tech Explore">Tech Explore</option>
+													<option value="Hercode Poirot">Hercode Poirot</option>
+													<option value="Vaksamara">Vaksamara</option>
+													<option value="Business As Usual ">Business As Usual </option>
+													<option value="Dota 2">Dota 2</option>
+													<option value="CS: GO">CS: GO</option>
+													<option value="Need for speed MW">Need for speed MW</option>
+													<option value="FIFA 18">FIFA 18</option>
+
+
 												</select>
 											</div>
 									</div>
@@ -125,7 +142,11 @@
 										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);"/>
 									</div>
 									<br id="br4">
-									<div id="dcollege">
+									<div id="dname5" hidden>
+										<input type="text" name="name5" id="name4"  placeholder="Team Member 5's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);" hidden/>
+									</div>
+									<br id="br5" hidden>
+									<div id="dcollege" >
 										<input type="text" name="college" id="college"  placeholder="College Name"  pattern ="^[a-zA-Z\s.]+$" required/>
 									</div>
 									<br>
@@ -195,7 +216,7 @@
 				var yourSelect = document.getElementById( "event_id" );
 				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
 				  c=0;
-				if(eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor"){ //max 4
+				if(eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor" || eventSelected=='Business As Usual '){ //max 4
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'block ';
@@ -222,7 +243,7 @@
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'none ';
 				}
-				else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon"){//max 1
+				else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon" || eventSelected=="Dare Devil" || eventSelected=='Vaksamara' || eventSelected=='FIFA 18' || eventSelected=='Need for speed MW'){//max 1
 					document.getElementById('name2').style.display = 'none ';
 					document.getElementById('name2').value = "";
 					document.getElementById('name3').style.display = 'none ';
@@ -233,7 +254,7 @@
 					document.getElementById('br3').style.display = 'none ';
 					document.getElementById('br4').style.display = 'none ';
 				}
-				else if(eventSelected=="RobIT" ){//min 3 max4
+				else if(eventSelected=="RobIT" || eventSelected=="Mechronin"  || eventSelected=="Tech Explore"){//min 3 max4
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'block ';
@@ -243,8 +264,53 @@
 					document.getElementById('name2').required = true;
 					document.getElementById('name3').required = true;
 				}
-				else if(eventSelected=="Tech Roadies"){	//tech roadies registerations
-					window.location.href='http://bit.ly/TechRoadies2019';
+				// else if(eventSelected=="Tech Roadies"){	//tech roadies registerations
+				// 	window.location.href='http://bit.ly/TechRoadies2019';
+				// }
+				else if(eventSelected=='FusionEra' || eventSelected=='Technocrat' || eventSelected=='RFID Hunt' || eventSelected=='Hercode Poirot'){//min  2 max 3
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'none ';
+					document.getElementById('name2').required = true;
+				}
+				else if(eventSelected=='Electronoob' || eventSelected=='Civitek'){//min 2 max 2
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'none ';
+					document.getElementById('name4').style.display = 'none ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'none ';
+					document.getElementById('br4').style.display = 'none ';
+					document.getElementById('name2').required = true;
+				}
+				else if(eventSelected=="Camera ‘con’cious"){//min 2 max 4
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('name4').value = "";
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+					document.getElementById('name2').required = true;
+				}
+				else if(eventSelected == 'CS: GO' || eventSelected == 'Dota 2'){//min 5 
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+					document.getElementById('dname5').removeAttribute("hidden");
+					document.getElementById('br5').removeAttribute("hidden");
+					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = true;
+					document.getElementById('name4').required = true;
+					document.getElementById('name5').required = true;
+
 				}
 				
 

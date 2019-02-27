@@ -112,6 +112,7 @@
 													<option value="CS: GO">CS: GO</option>
 													<option value="Need for speed MW">Need for speed MW</option>
 													<option value="FIFA 18">FIFA 18</option>
+													<option value="Camera ‘con’cious">Camera ‘con’cious</option>
 
 
 												</select>
@@ -143,11 +144,11 @@
 									</div>
 									<br id="br4">
 									<div id="dname5" hidden>
-										<input type="text" name="name5" id="name4"  placeholder="Team Member 5's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);" hidden/>
+										<input type="text" name="name5" id="name5"  placeholder="Team Member 5's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);" hidden/>
 									</div>
 									<br id="br5" hidden>
 									<div id="dcollege" >
-										<input type="text" name="college" id="college"  placeholder="College Name"  pattern ="^[a-zA-Z\s.]+$" required/>
+										<input type="text" name="college" id="college"  placeholder="College Name"  pattern ="^[a-zA-Z\s.]+$"  onkeyup="costFunc(this);" required/>
 									</div>
 									<br>
 									<div id="dqty">
@@ -216,23 +217,20 @@
 				var yourSelect = document.getElementById( "event_id" );
 				var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
 				  c=0;
-				if(eventSelected=="Lazer Tag" || eventSelected=="Line Seguidor" || eventSelected=='Business As Usual '){ //max 4
+				  console.log(eventSelected);
+				if( eventSelected=='Business As Usual'){ //max 4
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'block ';
 					document.getElementById('br2').style.display = 'block ';
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'block ';
-				}
-				else if(eventSelected=="CodeStorm"){//max2
-					document.getElementById('name2').style.display = 'block ';
-					document.getElementById('name3').style.display = 'none ';
-					document.getElementById('name3').value = "";
-					document.getElementById('name4').style.display = 'none ';
-					document.getElementById('name4').value = "";
-					document.getElementById('br2').style.display = 'block ';
-					document.getElementById('br3').style.display = 'none ';
-					document.getElementById('br4').style.display = 'none ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
+					document.getElementById('name5').value = "";
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
 				}
 				else if(eventSelected=="Summit" || eventSelected=="Web Development"){//max3
 					document.getElementById('name2').style.display = 'block ';
@@ -242,6 +240,12 @@
 					document.getElementById('br2').style.display = 'block ';
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'none ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
+					document.getElementById('name2').required = false;
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
 				}
 				else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon" || eventSelected=="Dare Devil" || eventSelected=='Vaksamara' || eventSelected=='FIFA 18' || eventSelected=='Need for speed MW'){//max 1
 					document.getElementById('name2').style.display = 'none ';
@@ -253,8 +257,15 @@
 					document.getElementById('br2').style.display = 'none ';
 					document.getElementById('br3').style.display = 'none ';
 					document.getElementById('br4').style.display = 'none ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
+					document.getElementById('name2').required = false;
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
 				}
-				else if(eventSelected=="RobIT" || eventSelected=="Mechronin"  || eventSelected=="Tech Explore"){//min 3 max4
+				else if(eventSelected=="RobIT" || eventSelected=="Mechronin"  || eventSelected=="Line Seguidor" || eventSelected=="Tech Explore"){//min 3 max4
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'block ';
@@ -263,19 +274,30 @@
 					document.getElementById('br4').style.display = 'block ';
 					document.getElementById('name2').required = true;
 					document.getElementById('name3').required = true;
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
 				}
 				// else if(eventSelected=="Tech Roadies"){	//tech roadies registerations
 				// 	window.location.href='http://bit.ly/TechRoadies2019';
 				// }
-				else if(eventSelected=='FusionEra' || eventSelected=='Technocrat' || eventSelected=='RFID Hunt' || eventSelected=='Hercode Poirot'){//min  2 max 3
+				else if(eventSelected=='FusionEra' || eventSelected=='Technocrat' || eventSelected=='RFID Hunt' || eventSelected=='Hercode Poirot' || eventSelected=="CodeStorm"){//min  2 max 3
 					document.getElementById('name2').style.display = 'block ';
 					document.getElementById('name3').style.display = 'block ';
 					document.getElementById('name4').style.display = 'none ';
 					document.getElementById('name4').value = "";
 					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'none ';
 					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
 				}
 				else if(eventSelected=='Electronoob' || eventSelected=='Civitek'){//min 2 max 2
 					document.getElementById('name2').style.display = 'block ';
@@ -283,9 +305,15 @@
 					document.getElementById('name4').style.display = 'none ';
 					document.getElementById('name4').value = "";
 					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
 					document.getElementById('br3').style.display = 'none ';
 					document.getElementById('br4').style.display = 'none ';
 					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
 				}
 				else if(eventSelected=="Camera ‘con’cious"){//min 2 max 4
 					document.getElementById('name2').style.display = 'block ';
@@ -293,9 +321,16 @@
 					document.getElementById('name4').style.display = 'block ';
 					document.getElementById('name4').value = "";
 					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
 					document.getElementById('br3').style.display = 'block ';
 					document.getElementById('br4').style.display = 'block ';
 					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = false;
+					document.getElementById('name4').required = false;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
+
 				}
 				else if(eventSelected == 'CS: GO' || eventSelected == 'Dota 2'){//min 5 
 					document.getElementById('name2').style.display = 'block ';
@@ -310,6 +345,23 @@
 					document.getElementById('name3').required = true;
 					document.getElementById('name4').required = true;
 					document.getElementById('name5').required = true;
+
+				}
+				else if(eventSelected =='Lazer Tag'){ //min4 max 4
+					document.getElementById('name2').style.display = 'block ';
+					document.getElementById('name3').style.display = 'block ';
+					document.getElementById('name4').style.display = 'block ';
+					document.getElementById('br2').style.display = 'block ';
+					document.getElementById('br3').style.display = 'block ';
+					document.getElementById('br4').style.display = 'block ';
+					document.getElementById('dname5').hidden = true;
+					document.getElementById('br5').hidden = true;
+					document.getElementById('name2').required = true;
+					document.getElementById('name3').required = true;
+					document.getElementById('name4').required = true;
+					document.getElementById('name5').required = false;
+					document.getElementById('name5').value = "";
+					console.log("Lazertag");
 
 				}
 				
@@ -348,8 +400,11 @@
 					document.getElementById("amount").value = 30*c;
 				else if(eventSelected=="Epsilon")
 					document.getElementById("amount").value = 0*c;
-				else if(eventSelected=="Web Development")
+				else if(eventSelected=="Web Development" || eventSelected =="Business As Usual" || eventSelected =="Technocrat" || eventSelected =="Dare Devil" || eventSelected=="RFID Hunt" || eventSelected =="FusionEra" || eventSelected=="Electronoob" || eventSelected=="Mechronin" || eventSelected=="Civitek" || eventSelected=="Tech Explore"|| eventSelected=="Tech Explore" || eventSelected=="Hercode Poirot" || eventSelected=="Vaksamara" || eventSelected=="Business As Usual" || eventSelected=="Dota 2" ||eventSelected=="CS: GO" ||eventSelected=="Need for speed MW" ||eventSelected=="FIFA 18" || eventSelected=="Camera ‘con’cious" )
 					document.getElementById("amount").value = 30*c;
+			
+		
+		
 			}
 			</script>
 			</body>
